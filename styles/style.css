@@ -4,7 +4,7 @@
   background-color: var(--bg-color, #000028);
   color: var(--text-color, #f1b2ce);
   font-family: var(--main-font), sans-serif;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-attachment: fixed;
   inline-size: 100%;
   background-position: center;
@@ -22,7 +22,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   font-family: var(--main-font);
-  color: var(--accent-color);
+  color: var(--button-color);
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
@@ -70,6 +70,7 @@
   font-family: var(--main-font, sans-serif);
   inset-block-start: 0px;
   inset-inline-end: 30px;
+  color: var(--accent-color);
 }
 .header__decoration::after {
   content: "";
@@ -130,7 +131,7 @@
   background-color: var(--accent-color);
   display: inline-block;
   background-size: cover;
-  color: var(--bg-color);
+  color: var(--parag-title-color);
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-weight: 700;
@@ -144,7 +145,7 @@
 
 .content__title {
   font-family: var(--main-font);
-  color: var(--accent-color);
+  color: var(--parag-title-color);
   font-size: 18px;
   font-weight: 700;
   text-align: start;
@@ -153,10 +154,10 @@
   margin-block-end: 10px;
 }
 .content__text-subtitle {
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   display: inline-block;
   background-size: cover;
-  color: var(--bg-color);
+  color: var(--parag-title-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
@@ -165,10 +166,10 @@
 }
 
 .content__text-subtitle_regular {
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   font-family: var(--main-font);
   background-size: cover;
-  color: var(--bg-color);
+  color: var(--parag-title-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
@@ -192,10 +193,10 @@
 }
 
 .content__picture-subtitle {
-  background-color: var(--accent-color);
+  background-color: var(--accent-bg-color);
   display: inline-block;
   background-size: cover;
-  color: var(--bg-color);
+  color: var(--parag-title-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 700;
