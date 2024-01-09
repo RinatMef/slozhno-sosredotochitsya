@@ -8,10 +8,15 @@
   --bg-color: #FFF1F7;
   --parag-text-color: #353430;
   --parag-title-color: #353430;
+  --parag-subtitle-color: #353430;
   --header-title-color: #FFC2E6;
   --accent-color: #FF8DCB;
   --bg-image: url(../images/cover-image-light.png);
   --button-color: #353430;
   --accent-bg-color: #FF8DCB;
  
+}
+
+.page.theme_light .header__decoration {
+  display: none;
 }

@@ -5,7 +5,8 @@
 :root {
   --bg-color: #000028;
   --parag-text-color: #F1B2CE;
-  --parag-title-color: #000028;
+  --parag-title-color: #FF0070;
+  --parag-subtitle-color: #000028;
   --header-title-color: #DB00FF;
   --accent-color: #FF0070;
   --accent-bg-color: #FF0070;
@@ -15,5 +16,3 @@
   
 }
   
-
-}
