@@ -47,7 +47,7 @@
       Или почему нам так сложно сконцентрироваться, особенно когда очень надо
     </p>
   </header>
-  <main class="content">
+  <main>
     <section class="content__text-block content__text-block_section-1">
       <h2 class="content__title grid-area_1">
         Почему сосредоточиться так сложно
@@ -156,7 +156,8 @@
         <h3 class="content__text-subtitle_regular">Прогуляйтесь</h3>
         <p class="content__text">
           Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-          показал, что созерцание природы повышает концентрацию, в то время как
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank"
+            class="text-shadow">показал</a>, что созерцание природы повышает концентрацию, в то время как
           после просмотра городских пейзажей она наоборот понижается. Можно
           совместить прогулку с физическими упражнениями или бегом — так в мозг
           поступит ещё больше кислорода и он будет лучше работать. Но и простая
@@ -188,19 +189,29 @@
         А можно в картинках?
       </h3>
       <picture class="content__picture sunset">
-        <img class="content__picture-size" loading="lazy" src="./images/sunset.png" alt="picture description" />
+        <source srcset="./images/sunset.avif" type="image/avif">
+        <source srcset="./images/sunset.webp" type="image/webp">
+        <img class="content__picture-size" loading="lazy" src="./images/sunset.png" alt="picture description 1" />
       </picture>
       <picture class="content__picture ice-cream">
-        <img class="content__picture-size" loading="lazy" src="./images/ice-cream.png" alt="picture description" />
+        <source srcset="./images/ice-cream.avif" type="image/avif">
+        <source srcset="./images/ice-cream.webp" type="image/webp">
+        <img class="content__picture-size" loading="lazy" src="./images/ice-cream.png" alt="picture description 2" />
       </picture>
       <picture class="content__picture tape">
-        <img class="content__picture-size" loading="lazy" src="./images/tape.png" alt="picture description" />
+        <source srcset="./images/tape.avif" type="image/avif">
+        <source srcset="./images/tape.webp" type="image/webp">
+        <img class="content__picture-size" loading="lazy" src="./images/tape.png" alt="picture description 3" />
       </picture>
       <picture class="content__picture books">
-        <img class="content__picture-size" loading="lazy" src="./images/books.png" alt="picture description" />
+        <source srcset="./images/books.avif" type="image/avif">
+        <source srcset="./images/books.webp" type="image/webp">
+        <img class="content__picture-size" loading="lazy" src="./images/books.png" alt="picture description 4" />
       </picture>
       <picture class="content__picture street">
-        <img class="content__picture-size" loading="lazy" src="./images/street.png" alt="picture description" />
+        <source srcset="./images/street.avif" type="image/avif">
+        <source srcset="./images/street.webp" type="image/webp">
+        <img class="content__picture-size" loading="lazy" src="./images/street.png" alt="picture description 5" />
       </picture>
     </div>
   </main>

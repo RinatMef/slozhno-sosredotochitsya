@@ -11,7 +11,8 @@
   --accent-color: #FF0070;
   --accent-bg-color: #FF0070;
   --main-font: "IBM Plex mono";
-  --button-color: #FF0070; 
+  --button-color: #FF0070;
+  --button-color-hover: rgba(255, 0, 112, 0.4);
   --bg-image: url(../images/cover-image-dark.png)
   
 }
