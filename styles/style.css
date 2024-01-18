@@ -4,12 +4,14 @@
   background-color: var(--bg-color, #000028);
   color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, monospace);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
   background-image: var(--bg-image);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10px;
 }
 
 header,
@@ -28,32 +30,33 @@ footer {
     "nav"
     "header-title"
     "header-accent";
+  padding: 10px;
+  margin-block-end: 40px;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
-  font-family: var(--main-font, monospace);
   color: var(--button-color);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
   text-align: center;
-  border: none;
+  border: 1px solid transparent;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-item {
+  inline-size: 70px;
 }
 
 .header__theme-menu-list {
-  list-style: none;
   display: flex;
-  gap: 14px;
-  align-items: self-end;
+  gap: 13px;
+  align-items: center;
   flex-direction: column;
-  justify-content: end;
-  padding: 0 10px;
 }
 
 .header-main-title {
-  font-family: var(--main-font, monospace);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 96px;
@@ -64,8 +67,28 @@ footer {
   grid-area: header-title;
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 0 var(--accent-color);
+.header__theme-menu-button {
+  cursor: pointer;
+  padding-inline: 13px;
+  transition: 300ms;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color-hover);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--button-color);
+  outline: none;
 }
 
 .header__decoration {
@@ -75,10 +98,8 @@ footer {
 .header__decoration::before {
   content: "REC";
   position: absolute;
-  font-size: 18px;
-  font-family: var(--main-font, monospace);
-  inset-block-start: 0px;
-  inset-inline-end: 30px;
+  inset-block-start: 10px;
+  inset-inline-end: 38px;
   color: var(--accent-color);
 }
 .header__decoration::after {
@@ -89,8 +110,8 @@ footer {
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px #ff0070;
   background-color: var(--accent-color, #ff0070);
-  inset-block-start: 7px;
-  inset-inline-end: 10px;
+  inset-block-start: 18px;
+  inset-inline-end: 19px;
 }
 
 .decorated-zone {
@@ -102,10 +123,10 @@ footer {
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-  inset-block-start: 0px;
-  inset-inline-end: 0px;
+  border-block-start: 1px solid var(--decorated-zone-color);
+  border-inline-end: 1px solid var(--decorated-zone-color);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
 }
 
 .decorated-zone::after {
@@ -113,10 +134,10 @@ footer {
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
-  inset-block-end: 0px;
-  inset-inline-start: 0px;
+  border-block-end: 1px solid var(--decorated-zone-color);
+  border-inline-start: 1px solid var(--decorated-zone-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
 }
 
 .header__theme-menu {
@@ -128,10 +149,7 @@ footer {
   display: inline-block;
   background-size: cover;
   color: var(--parag-subtitle-color);
-  font-family: var(--main-font, monospace);
-  font-size: 18px;
   font-weight: 700;
-
   grid-area: header-accent;
 }
 
@@ -156,7 +174,7 @@ footer {
 }
 
 .content__figure {
-  margin-block-start: 50px;
+  padding-inline: 10px;
 }
 
 .content__figure-section {
@@ -184,6 +202,11 @@ footer {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.content__text-block {
+  padding-inline: 10px;
+  margin-block-end: 50px;
 }
 
 .content__text-block_section-1 {
@@ -247,19 +270,14 @@ footer {
 }
 
 .content__title {
-  font-family: var(--main-font, monospace);
   color: var(--parag-title-color);
   font-size: 18px;
   font-weight: 700;
   text-align: start;
-  line-height: 23.4px;
-  margin-block-start: 50px;
-  margin-block-end: 0px;
 }
 
 .content__text-subtitle {
   background-color: var(--accent-bg-color);
-  display: block;
   background-size: cover;
   color: var(--parag-subtitle-color);
   font-family: var(--main-font, monospace);
@@ -275,21 +293,15 @@ footer {
 
 .content__text-subtitle_regular {
   background-color: var(--accent-bg-color);
-  font-family: var(--main-font, monospace);
   background-size: cover;
   color: var(--parag-subtitle-color);
-  font-size: 18px;
+  font-size: 18px; /* поправить!!!!!!!!!!!!!!!!*/
   font-weight: 400;
   margin-block-start: 0px;
   margin-block-end: 10px;
 }
 
 .content__text {
-  font-family: var(--main-font, monospace);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23.4px;
-  letter-spacing: 0em;
   text-align: left;
   color: var(--parag-text-color);
   margin-block-end: 10px;
@@ -305,9 +317,8 @@ footer {
   background-size: cover;
   color: var(--parag-subtitle-color);
   font-family: var(--main-font, monospace);
-  font-size: 18px;
+  font-size: 18px; /* поправить!!!!!!!!!!!!!!!!*/
   font-weight: 700;
-
   margin-block-end: 0px;
 }
 
@@ -315,8 +326,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block-start: 50px;
+  margin-block-start: 40px;
   max-height: 100vh;
+  padding: 10px;
 }
 
 .footer__section .header-main-title {
@@ -324,44 +336,21 @@ footer {
   justify-self: center;
 }
 
-.header__theme-menu-button_active {
-  outline: 1px solid var(--button-color);
-  outline-offset: 3px;
-  pointer-events: none;
-}
-
 a:focus {
   outline: none;
 }
 
-.content__text a {
+.text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
-.content__text a:focus-visible {
+.text-link:focus-visible {
   outline: 1px solid var(--button-color);
 }
 
-.content__text a:hover {
-  text-decoration: underline;
-  text-decoration-skip: auto;
-}
-
-.header__theme-menu-button {
-  cursor: pointer;
-}
-
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--button-color-hover);
-}
-
-.header__theme-menu-button:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  text-decoration: underline;
-  outline: none;
+.text-link:hover {
+  border-block-end: 1px solid var(--parag-text-color);
 }
 
 /*****************768***********************/
@@ -374,13 +363,28 @@ a:focus {
       ". nav"
       "header-title header-title"
       ". header-accent";
-  }
-
-  .page {
     padding: 20px;
+    margin-block-end: 60px;
   }
 
-  .header__theme-menu {
+  .header__decoration::before {
+    inset-block-start: 20px;
+    inset-inline-end: 49px;
+  }
+
+  .header__decoration::after {
+    inset-block-start: 28px;
+    inset-inline-end: 29px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
   }
 
   .header-main-title {
@@ -405,16 +409,17 @@ a:focus {
 
   .content__text-block_section-1 .content__text-subtitle {
     margin-inline-start: 13px;
-
     margin-block-end: 0px;
   }
 
   .content__text-block {
-    margin-block-start: 80px;
+    margin-block-end: 80px;
+    padding-inline: 20px;
   }
 
   .content__figure {
     margin-block-start: 80px;
+    padding-inline: 20px;
   }
   .content__text-block_section-1 .content__text {
     margin-inline-start: 13px;
@@ -496,6 +501,7 @@ a:focus {
       ". grid-area_6 grid-area_6"
       ". grid-area_7 grid-area_7";
   }
+
   .content__figure-section .content__picture-subtitle {
     margin-block-start: 0px;
   }
@@ -511,8 +517,8 @@ a:focus {
   }
 
   .footer__section {
-    margin-block-start: 80px;
-    
+    margin-block-start: 60px;
+    padding: 20px;
   }
 
   footer .header-main-title {
@@ -532,10 +538,13 @@ a:focus {
       ". header-accent";
   }
 
+  .header__theme-menu {
+    justify-self: center;
+  }
+
   .header__theme-menu-list {
     flex-direction: row;
-    gap: 24px;
-    padding: 0 10px;
+    gap: 10px;
   }
 
   .header__theme-menu {
@@ -544,7 +553,7 @@ a:focus {
     justify-self: center;
   }
 
-    .header__accent-bg {
+  .header__accent-bg {
     margin-block-start: 131px;
     margin-block-end: 115px;
   }
@@ -634,6 +643,4 @@ a:focus {
       "tape books ice-cream"
       "tape street street";
   }
-
-  
 }
