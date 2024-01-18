@@ -16,6 +16,7 @@
   --button-color: #353430;
   --button-color-hover: rgba(50, 49, 45, 0.4);
   --accent-bg-color: #ff8dcb;
+  transition: 1000ms;
 }
 
 .page.theme_light .header__decoration {
@@ -35,6 +36,7 @@
     --button-color: #353430;
     --button-color-hover: rgba(50, 49, 45, 0.4);
     --accent-bg-color: #ff8dcb;
+    transition: 1000ms;
   }
 
   .page.theme_auto .header__decoration {
