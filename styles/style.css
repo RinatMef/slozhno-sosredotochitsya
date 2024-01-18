@@ -532,10 +532,6 @@ a:focus {
       ". header-accent";
   }
 
-  .header__theme-menu {
-    justify-self: center;
-  }
-
   .header__theme-menu-list {
     flex-direction: row;
     gap: 10px;
