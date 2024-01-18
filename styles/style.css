@@ -12,6 +12,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 1000ms;
 }
 
 header,
@@ -321,7 +322,7 @@ footer {
   justify-self: center;
 }
 
-a:focus {
+.text-link:focus {
   outline: none;
 }
 
