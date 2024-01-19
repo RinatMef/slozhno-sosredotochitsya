@@ -1,4 +1,4 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Спасибо за подробное ревью! */
 
 .page {
   background-color: var(--bg-color, #000028);
@@ -332,7 +332,7 @@ footer {
 }
 
 .text-link:focus-visible {
-  outline: 1px solid var(--button-color);
+  outline: 1px solid var(--parag-text-color);
 }
 
 .text-link:hover {
