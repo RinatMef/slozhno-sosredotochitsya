@@ -240,6 +240,7 @@ footer {
   background-size: cover;
   color: var(--parag-subtitle-color);
   font-size: inherit;
+  font-weight: inherit;
   margin-block-start: 0px;
   margin-block-end: 10px;
 }
